@@ -1,0 +1,5 @@
+@EndUserText.label: 'Services used for Data Log - cust app'
+define service ZZRSD_DATA_LOG {
+  expose ZZRI_DESTLOG  as dest;
+  expose ZZRI_MAPC0LOG as mapc0;
+}

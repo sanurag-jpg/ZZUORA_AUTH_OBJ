@@ -1,0 +1,15 @@
+@EndUserText.label: 'Customer based data read service def'
+define service ZZRSD_READALLCV2 {
+  expose ZZRI_CUSTRV2     as Cust;
+  expose ZZRI_CUSTCAPBRV2 as CustCapb;
+  expose ZZRI_DESTRV2     as Dest;
+  expose ZZRI_NOTFV2      as Notif;
+  expose ZZRI_MAPC0V2     as Mapc;
+  expose ZZRI_APICV2      as Apic;
+  expose ZZRI_APIANV2     as Apia;
+  expose ZZRI_APIAN2V2    as Apiav2;
+  expose ZZRI_CSTAPICBV2  as ApiCapbAnalytics;
+  expose ZZRC_APICEV2     as Apice;
+  expose ZZRC_REVHV2      as Revh;
+  expose ZZRC_REVRV2      as Revr;
+}

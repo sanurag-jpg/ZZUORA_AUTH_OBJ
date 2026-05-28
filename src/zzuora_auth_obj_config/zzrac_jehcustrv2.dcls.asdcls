@@ -1,0 +1,33 @@
+@EndUserText.label: 'JE Payload Access control'
+@MappingRole: true
+define role ZZRAC_JEHCUSTRV2 {
+
+    grant select on ZZRI_JEHV2 
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2, ZAF_CTIDV2);    
+        
+    grant select on ZZRI_JEIV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2, ZAF_CTIDV2);
+        
+    grant select on ZZRI_JECV2 
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2, ZAF_CTIDV2);  
+        
+    grant select on ZZRI_JERV2 
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2, ZAF_CTIDV2);
+
+    grant select on ZZRI_REVHV2 
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2, ZAF_CTIDV2);        
+       
+    grant select on ZZRC_JEHV2
+        where inheriting conditions from entity ZZRI_JEHV2;
+        
+    grant select on ZZRC_JEIV2
+        where inheriting conditions from entity ZZRI_JEIV2;
+        
+    grant select on ZZRC_JECV2
+        where inheriting conditions from entity ZZRI_JECV2;
+        
+    grant select on ZZRC_JERV2
+        where inheriting conditions from entity ZZRI_JERV2;
+               
+               
+}

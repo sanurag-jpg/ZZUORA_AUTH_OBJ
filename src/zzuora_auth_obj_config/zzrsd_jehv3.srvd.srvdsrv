@@ -1,0 +1,11 @@
+@EndUserText.label: 'JE Header and Items service def.'
+define service ZZRSD_JEHV3 {
+  expose ZZRC_JEHV2   as Header;
+  expose ZZRC_JEIV2   as Item;
+  expose ZZRC_JECV2   as Currency;
+  expose ZZRC_JERV2   as Return;
+  expose ZZRC_JEAPIV2 as SB;
+  expose ZZRC_JELGV2  as lognn;
+  expose ZZRC_JEPCV2  as logpc;
+  expose ZZRC_JEBDV2  as logbd;
+}

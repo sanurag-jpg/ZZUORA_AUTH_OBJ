@@ -1,0 +1,45 @@
+@EndUserText.label: 'Customer Access Control - Read only'
+@MappingRole: true
+define role ZZRAC_CUSTRV2 {
+    grant select on ZZRI_DESTLOG
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_MAPC0LOG
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);        
+//    grant select on ZZRI_MAPC0LOGv1
+//        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_MAPC0LOGV1
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_APIANV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);    
+    grant select on ZZRI_APIAN2V2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_APICV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_CSTAPICBV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);        
+    grant select on ZZRI_CUSTCAPBRV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);     
+    grant select on ZZRI_CUSTRV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);     
+    grant select on ZZRI_DESTRV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);  
+    grant select on ZZRI_MAPC0V2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);          
+    grant select on ZZRI_NOTFV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);  
+              
+    grant select on ZZRI_APICEV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_REVHV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+    grant select on ZZRI_REVRV2
+        where (CustomerId) = aspect pfcg_auth(ZAO_CTIDV2,ZAF_CTIDV2);
+        
+    grant select on ZZRC_APICEV2
+        where inheriting conditions from entity ZZRI_APICEV2;        
+    grant select on ZZRC_REVHV2
+        where inheriting conditions from entity ZZRI_REVHV2;
+    grant select on ZZRC_REVRV2
+        where inheriting conditions from entity ZZRI_REVRV2;
+        
+}
